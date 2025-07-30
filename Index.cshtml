@@ -1,29 +1,8 @@
-﻿@using EntityLayer.Concrete
-@model List<Customer>
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_UILayout.cshtml";
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
 
-<table class="table table-bordered">
-    <tr>
-        <th>#</th>
-        <th>Customer Name</th>
-        <th>Customer City</th>
-        <th>Customer Job</th>
-        <th>Update</th>
-        <th>Delete</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.CustomerId</td>
-            <td>@item.CustomerName</td>
-            <td>@item.CustomerCity</td>
-            <td>@item.Job.Name</td>
-            <td><a href="/Customer/UpdateCustomer/@item.CustomerId" class="btn btn-outline-success">Update</a></td>
-            <td><a href="/Customer/DeleteCustomer/@item.CustomerId" class="btn btn-outline-danger">Delete</a></td>
-        </tr>
-    }
-</table>
-<a href="/Customer/AddCustomer/" class="btn btn-outline-primary">Add New Customer</a>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
